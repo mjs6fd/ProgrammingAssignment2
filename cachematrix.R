@@ -1,6 +1,6 @@
 ## The first function creates a sspecial vector of functions that act as getters
-## and setters for a given matrix, as well as its inverse if it's already been
-## calculated.
+## and setters for a given invertible matrix, as well as its inverse if it's 
+## already been calculated.
 
 ## The second function uses the object created from the first function as an input
 ## to calculate the inverse of a matrix. If the inverse was already calculated in a 
@@ -9,8 +9,8 @@
 
 
 
-## Creates a list of fgetter/sett functions for a matrix and its calculated inverse.
-## Setting the inverse cashes the value in a variable that can be retrieved in a
+## Creates a list of getter/setter functions for a matrix and its calculated inverse.
+## Setting the inverse caches the value in a variable that can be retrieved in a
 ## different R environment, so that if the matrix hasn't changed, the inverse doesn't
 ## need to be recalculated.
 makeCacheMatrix <- function(x = matrix()) {
@@ -35,9 +35,9 @@ makeCacheMatrix <- function(x = matrix()) {
 
 
 ## Takes a list of functions created from makeCacheMatrix as input, which is used
-## to store getters and setters for a matrix and its inverse.
+## to store getters and setters for an invertible matrix and its inverse.
 ## If the inverse has already been calculated for a matrix, and the matrix hasn't
-## changed, the funciton will retireve it without being calculated.
+## changed, the function will retrieve it without being calculated.
 ## Otherwise, it will calculate the inverse and cache it in the list object being 
 ## used as the input for the function.
 cacheSolve <- function(x, ...) {
