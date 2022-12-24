@@ -1,4 +1,4 @@
-## The first function creates a sspecial vector of functions that act as getters
+## The first function creates a special vector of functions that act as getters
 ## and setters for a given invertible matrix, as well as its inverse if it's 
 ## already been calculated.
 
